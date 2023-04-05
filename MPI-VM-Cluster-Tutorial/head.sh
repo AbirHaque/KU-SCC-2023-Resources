@@ -33,3 +33,13 @@ df -h  #Check mounted directories
 nano /etc/fstab #So we don't have to manually mount shared directory eeach reboot
 #MPI CLUSTER SETUP
 #manager:/home/mpiuser/cloud /home/mpiuser/cloud nfs
+
+
+
+nano hostfile.txt
+#head
+#compute1
+#compute2
+
+mpicc test_mpi.c -o test_mpi
+mpiexec -np 18 -hostfile hostfile.txt ./test_mpi
