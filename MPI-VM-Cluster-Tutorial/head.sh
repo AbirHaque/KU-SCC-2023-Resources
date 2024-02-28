@@ -27,12 +27,12 @@ sudo nano /etc/exports
 
 mkdir cloud
 exportfs -a
-sudo mount -t nfs manager:/home/mpiuser/cloud ~/cloud
+sudo mount -t nfs head:/home/mpiuser/cloud ~/cloud
 df -h  #Check mounted directories
 
 nano /etc/fstab #So we don't have to manually mount shared directory eeach reboot
 #MPI CLUSTER SETUP
-#manager:/home/mpiuser/cloud /home/mpiuser/cloud nfs
+#head:/home/mpiuser/cloud /home/mpiuser/cloud nfs
 
 
 
